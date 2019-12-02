@@ -6,4 +6,15 @@ body {background-color: #efefef;}
 
 #header {background:#4a8e8e;
   bottom-border:10px solid #434343;
+  
+#header nav li a{
+  color:#434343;
+  border:3px solid #434343;
+  border-radius:20px;
+  box-shadow:none;
+  background-color:#ffda46;
 }
+a {
+  font-weight:1000
+  }
+    
