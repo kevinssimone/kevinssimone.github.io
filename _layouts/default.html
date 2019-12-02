@@ -33,12 +33,10 @@
   position: relative;
   width: 50%;
 }
-
 .thumbnail {
   width: 100%;
   height: auto;
 }
-
 .overlay {
   position: absolute;
   bottom: 100%;
@@ -50,12 +48,10 @@
   height:0;
   transition: .5s ease;
 }
-
 .container:hover .overlay {
   bottom: 0;
   height: 100%;
 }
-
 .text {
   color: white;
   font-size: 20px;
@@ -113,32 +109,37 @@
 	
             <section>
                 <!-- then we are on the right post -->
-                  <div id="title">
-              
-             
-                    <h1>{{ current.title }}</h1>
-                    <hr>
-                </div>
- {% if current.thumbnail %}
-                    <img src="{{ current.thumbnail }}" alt="{{ current.title }}" title="{{ current.title }}" />
-                {{ current.content }}
-
-            </section>
-           <section>
-                <!-- then we are on the right post -->
                 {% if current.thumbnail %}
                     <img src="{{ current.thumbnail }}" alt="{{ current.title }}" title="{{ current.title }}" />
-
                 {% endif %}
                 <div id="title">
                     <h1>{{ current.title }}</h1>
                     <hr>
                 </div>
 
- {% if current.thumbnail %}
-                    <img src="{{ current.thumbnail }}" alt="{{ current.title }}" title="{{ current.title }}" />
                 {{ current.content }}
 
+            </section>
+            <section>
+                {% for post in site.posts limit: 5 %}
+                    {% if post.id == current.id %}
+                        {% continue %}
+                    {% endif %}
+                    <a href="{{ post.url }}">
+                    <div>
+                    {% if post.thumbnail %}
+                        <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
+                    {% endif %}
+                    <div id="title">
+                        <h1>{{ post.title }}</h1>
+                        <hr>
+                    </div>
+
+                    {{ post.content }}
+                    </div>
+                    </a>
+
+                {% endfor %}
             </section>
             <section>
                 {% for static in site.pages %}
