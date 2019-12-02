@@ -124,26 +124,21 @@
                 {{ current.content }}
 
             </section>
-            <section>
-                {% for post in site.posts limit: 5 %}
-                    {% if post.id == current.id %}
-                        {% continue %}
-                    {% endif %}
-                    <a href="{{ post.url }}">
-                    <div>
-                    {% if post.thumbnail %}
-                        <img src="{{ post.thumbnail }}" alt="{{ post.title }}" title="{{ post.title }}" />
-                    {% endif %}
-                    <div id="title">
-                        <h1>{{ post.title }}</h1>
-                        <hr>
-                    </div>
+           <section>
+                <!-- then we are on the right post -->
+                {% if current.thumbnail %}
+                    <img src="{{ current.thumbnail }}" alt="{{ current.title }}" title="{{ current.title }}" />
 
-                    {{ post.content }}
-                    </div>
-                    </a>
+                {% endif %}
+                <div id="title">
+                    <h1>{{ current.title }}</h1>
+                    <hr>
+                </div>
 
-                {% endfor %}
+ {% if current.thumbnail %}
+                    <img src="{{ current.thumbnail }}" alt="{{ current.title }}" title="{{ current.title }}" />
+                {{ current.content }}
+
             </section>
             <section>
                 {% for static in site.pages %}
