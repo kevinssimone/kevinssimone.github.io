@@ -4,4 +4,4 @@ title: About
 id: about
 ---
 
-This is my about page!!!!
+I'm a UX Designer from Waterloo, Ontario!
