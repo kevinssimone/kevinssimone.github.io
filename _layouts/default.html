@@ -32,9 +32,11 @@
 <body>
 	<div id="header">
 		<nav>
+		<span class="MyName"> Kevin Simone </span> 
             {% for static in site.pages %}
                 {% if static.id %}
                     <li class="downloads"><a href="#{{ static.id }}">{{ static.title }}</a></li>
+			
 
                 {% endif %}
             {% endfor %}
