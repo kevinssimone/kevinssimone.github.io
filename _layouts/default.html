@@ -113,14 +113,14 @@
 	
             <section>
                 <!-- then we are on the right post -->
-                {% if current.thumbnail %}
-                    <img src="{{ current.thumbnail }}" alt="{{ current.title }}" title="{{ current.title }}" />
+               
                 {% endif %}
                 <div id="title">
                     <h1>{{ current.title }}</h1>
                     <hr>
                 </div>
-
+ {% if current.thumbnail %}
+                    <img src="{{ current.thumbnail }}" alt="{{ current.title }}" title="{{ current.title }}" />
                 {{ current.content }}
 
             </section>
