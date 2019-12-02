@@ -28,3 +28,23 @@ a{
   font-family: 'Anton', sans-serif;
   font-size:42px;
   color:#e8e8e8}
+
+#myBtn {
+        position: fixed;
+        bottom: 10px;
+        float: right;
+        right: 18.5%;
+        left: 77.25%;
+        max-width: 30px;
+        width: 100%;
+        font-size: 12px;
+        border-color: rgba(85, 85, 85, 0.2);
+        background-color: rgb(100,100,100);
+        padding: .5px;
+        border-radius: 4px;
+
+    }
+/*On Hover Color Change*/
+    #myBtn:hover {
+        background-color: #7dbbf1;
+    }
