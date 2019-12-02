@@ -4,4 +4,4 @@ title: Contact
 id: contact
 ---
 
-This is my contact page!!!!
+Please consider getting in touch, I'd love to talk. 
