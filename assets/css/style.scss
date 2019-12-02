@@ -2,9 +2,10 @@
 ---
 
 @import "{{ site.theme }}";
-body {background-color: coral;}
+body {background-color: #efefef;}
 
 #header {background:#4a8e8e;
+  bottom-border:10px solid #434343;
 }
 <style>
 .footer {
